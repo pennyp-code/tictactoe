@@ -1,0 +1,94 @@
+body {
+  margin:0;
+  padding:0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#gameboard {
+  width: 300px;
+  height: 300px;
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 1px black;
+}
+
+.square{
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: solid 2px black;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle{
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  border: 15px solid blue;
+  box-sizing: border-box;
+}
+
+.cross {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+/*   transform: rotate(45deg); */
+/*   -ms-transform:rotate(45deg); */
+/*   -webkit-transform: roatate(45deg); */
+/*   background-color: red; */
+}
+
+.cross:before, .cross:after{
+  content: "";
+  position: absolute;
+   height: 90px;
+  width: 20px;
+/*   position: relative; */
+/*   transform: rotate(-45deg); */
+  background-color: red;
+  left: 40%;
+  top: 5%;
+  transform-origin:center;
+/*   background-color: #dOO; */
+  
+/*   position: abosolute;
+  z-index: -1;
+  background-color: red; */
+/*   border: solid 5px red; */
+/*   background-color: red; */
+}
+
+/* so not working */
+.cross:before {
+/*     height: 90px; */
+/*   width: 20px; */
+/*   position: relative; */
+  transform: rotate(45deg);
+/*   background-color: red; */
+/* } */
+/*   
+left: 50%;
+  width: 30%;
+  margin-left: -15%;
+  height: 100%; */
+}
+
+.cross:after { 
+/*    /* height: 90px; */
+/*   width: 20px; */
+/*   position: relative; */
+  transform: rotate(-45deg);
+/*   background-color: red; */ */
+  
+/* top: 50%;
+  height: 30%;
+  margin-top: -15%;
+  width: 100%; */
+}
